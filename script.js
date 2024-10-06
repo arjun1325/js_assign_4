@@ -5,53 +5,67 @@ $("#form-account").validate({
             minlength: 3,
             maxlength: 50
         },
+        age: {
+            required: true,
+            minlenght: 1,
+            maxlength: 2
+        },
         gender: {
             required: true,
             minlength: 4,
             maxlength: 15
         },
-        age: {
-            required: true,
-            maxlenght:3
-        },
         phone: {
             required: true,
             minlenght: 10,
-            maxlenght: 14
+            maxlength: 14
         },
         email: {
-            required: true
+            required: true,
+            email: true
         },
         address: {
             required: false,
-            maxlenght:50
+            maxlength: 50
         }
     },
+
+
+
     messages: {
         name: {
-            required: "Name  is required",
-            minlength: "Mininum 2 charecters",
-            maxlength: "Do not exceed 50 characters"
-        },
-        gender: {
-            required: "Please Enter Your Gender",
-            minlength: "minmum 4 characters",
-            maxlength: "maximum 15 characters"
+            required: "Please enter your name",
+            minlength: "Minumum 3 characters required",
+            maxlength: "Cannot exceed 50 characters"
         },
         age: {
-            required: "should be above 18"
-        
+            required: "Mininum 18 years old",
         },
-        address: {
-            maxlenght:"Do not exceed 50 charatcters"
+        gender: {
+            required: "Type your gender",
+            minlength: "Minumum 4 characters required",
+            maxlength: "Cannot exceed 15 characters"
         },
         phone: {
-            required: "Please enter your Phone Number ",
-            minlenght: "minimum 10 digits",
-            maxlenght: "maximum 14 digits"
+            required: "Enter your phone number",
+            minlenght: "Minumum 10 characters required",
+            maxlength: "Cannot exceed 14 characters"
         },
-
+        email: {
+          required:"Enter mail id",
+            email: "Enter a valid email id"
+        },
+        address: {
+            required: "Not manditory",
+            maxlength: "cannot exceed  50 characters"
+        }
     }
+
+
 }
 
 )
+
+
+
+
